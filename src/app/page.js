@@ -23,26 +23,31 @@ export default function Home() {
           <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             <div className='p-4'>
               <h3 className='font-extrabold text-2xl mb-4'>Expertise</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>Our team of seasoned developers brings years of experience and cutting-edge skills to the table. From front-end design to back-end functionality, we've got you covered.</p>
             </div>
 
             <div className='p-4'>
               <h3 className='font-extrabold text-2xl mb-4'>Custom Solutions</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>One-size-fits-all doesn't cut it in the digital world. We specialize in creating bespoke websites that reflect your brand identity and goals.</p>
             </div>
 
             <div className='p-4'>
               <h3 className='font-extrabold text-2xl mb-4'>Responsive Design</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>In today's mobile-first era, your website needs to shine on all devices. We ensure that your site is not just beautiful but fully responsive too.</p>
             </div>
 
             <div className='p-4'>
               <h3 className='font-extrabold text-2xl mb-4'>SEO Optimization</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>What good is a website if it can't be found? We implement SEO best practices to boost your site's visibility and search engine ranking.</p>
             </div>
 
             <div className='p-4'>
               <h3 className='font-extrabold text-2xl mb-4'>E-commerce Excellence</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>If you're looking to sell online, our e-commerce solutions will empower your business to thrive in the digital marketplace.</p>
             </div>
 
@@ -107,6 +112,7 @@ export default function Home() {
           <div className='mx-auto md:flex items-center px-6 pt-20 md:pt-36'>
             <div className='md:w-1/2 md:pr-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>Website Maintenance</h3>
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className='text-lg mb-4'>We're with you for the long haul, offering ongoing support, updates, and enhancements to keep your site in top shape.</p>
             </div>
 
@@ -117,11 +123,13 @@ export default function Home() {
 
       <section className='w-full flex flex-col items-center justify-center min-h-screen'>
         <div className='w-full max-w-screen-xl mx-auto text-center p-4'>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h2 className='font-extrabold text-4xl text-center mb-24 mt-24'>Let's Get Started</h2>
 
           <p className='text-lg mb-8'>Ready to transform your digital presence? Contact us today for a free consultation.<br/>
             Whether you have a clear vision or need guidance, ZUMO is here to turn your web development dreams into reality.</p>
 
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p className="text-lg mb-4">Join the ranks of our satisfied clients who have experienced the ZUMO difference.<br/> Let's build something incredible together!</p>
 
           <p>CONTACT FORM</p>
