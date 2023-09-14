@@ -1,0 +1,11 @@
+import Main from '@/app/_components/shared/main'
+
+const About = () => {
+  return (
+    <Main>
+      About page
+    </Main>
+  )
+}
+
+export default About
