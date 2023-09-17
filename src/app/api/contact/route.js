@@ -1,4 +1,3 @@
-// Notice the funciton definiton:
 import { NextResponse } from 'next/server'
 
 export async function GET(req) {
@@ -42,7 +41,7 @@ export async function POST(req) {
       })
     })
 
-    return NextResponse.json(res.json(), {
+    return NextResponse.json('', {
       status: 200,
     });
   } catch (error) {
