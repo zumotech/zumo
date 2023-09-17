@@ -16,6 +16,7 @@ module.exports = {
         main: {
           text: '#f4f4f4',
           DEFAULT: '#020917',
+          light: '#172538',
         },
       },
     },

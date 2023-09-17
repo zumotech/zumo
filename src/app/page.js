@@ -1,18 +1,24 @@
 import Image from 'next/image'
 import Main from '@/app/_components/shared/main'
+import ContactForm from '@/app/_components/form/contactForm'
+import React from 'react'
+import ScrollToContactButton from '@/app/_components/form/scrollToContactButton'
 
 export default function Home() {
+
+
   return (
     <Main>
       <section className='w-full flex flex-col items-center justify-center min-h-screen'>
         <div className='w-full max-w-screen-xl mx-auto p-4'>
           <div className='w-full max-w-3xl'>
-            <h1 className='font-extrabold text-6xl mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-red-500'>Your Partner in Web Development</h1>
+            <h1 className='font-extrabold text-5xl md:text-6xl mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-red-500'>Your Partner in Web Development</h1>
 
-            <p className='text-2xl'>Are you ready to elevate your online presence and drive business growth through exceptional web solutions?
-              Look no further!
-              ZUMO is your trusted web development partner, dedicated to crafting stunning, high-performing websites tailored to your unique needs.</p>
-          </div>
+            <p className='text-2xl mb-14'>Are you ready to elevate your online presence and drive business growth through exceptional web solutions?
+              Look no further!<br/> ZUMO is your trusted web development partner, dedicated to crafting stunning, high-performing websites tailored to your unique needs.</p>
+
+            <ScrollToContactButton/>
+            </div>
         </div>
       </section>
 
@@ -118,10 +124,19 @@ export default function Home() {
 
             <div className='flex md:w-1/2'>IMAGE?</div>
           </div>
+
+          <div className='mx-auto md:flex flex-row-reverse items-center px-6 pt-20 md:pt-36'>
+            <div className='md:w-1/2 md:pl-24 pb-8'>
+              <h3 className='font-extrabold text-3xl mb-4'>Business and functional analysis</h3>
+              <p className='text-lg mb-4'>Unlock the potential of your business through meticulous business and functional analysis. We turn complexity into clarity, helping you pave the path to success.</p>
+            </div>
+
+            <div className='flex md:w-1/2'>IMAGE?</div>
+          </div>
         </div>
       </section>
 
-      <section className='w-full flex flex-col items-center justify-center min-h-screen'>
+      <section id='contact-form' className='w-full flex flex-col items-center justify-center min-h-screen'>
         <div className='w-full max-w-screen-xl mx-auto text-center p-4'>
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h2 className='font-extrabold text-4xl text-center mb-24 mt-24'>Let's Get Started</h2>
@@ -132,7 +147,9 @@ export default function Home() {
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p className="text-lg mb-4">Join the ranks of our satisfied clients who have experienced the ZUMO difference.<br/> Let's build something incredible together!</p>
 
-          <p>CONTACT FORM</p>
+          <div className='w-full max-w-screen-lg mx-auto mb-8'>
+            <ContactForm />
+          </div>
         </div>
       </section>
     </Main>

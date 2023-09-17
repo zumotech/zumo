@@ -17,7 +17,7 @@ const Footer = () => {
           />
         </div>
 
-        <p className='text-center text-sm leading-6'>© 2023 ZUMO. All rights reserved.</p>
+        <p className='text-center text-sm leading-6'>© { new Date().getFullYear() } ZUMO. All rights reserved.</p>
       </div>
       {/*<p><FontAwesomeIcon icon={faCoffee} /></p>*/}
       {/*<p><FontAwesomeIcon icon={faTwitter} /></p>*/}
