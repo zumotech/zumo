@@ -17,6 +17,7 @@ module.exports = {
           text: '#f4f4f4',
           DEFAULT: '#020917',
           light: '#172538',
+          green: '#33e47f',
         },
       },
     },
