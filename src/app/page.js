@@ -6,16 +6,22 @@ import ScrollToContactButton from '@/app/_components/form/scrollToContactButton'
 
 export default function Home() {
 
-
   return (
     <Main>
-      <section className='w-full flex flex-col items-center justify-center min-h-screen'>
-        <div className='w-full max-w-screen-xl mx-auto p-4'>
+      <section className='w-full flex flex-col items-center justify-center min-h-screen relative'>
+        <div className='absolute -top-[102px] blur-sm left-0 flex text-center items-center justify-center w-full min-h-screen h-full overflow-hidden -z-10'>
+          <video className='absolute top-0 left-0 w-full h-full object-cover' playsInline autoPlay muted loop>
+            {/*<source src="/video-bg.webm" type="video/webm"/>*/}
+            <source src="/video-bg.mp4" type="video/mp4"/>
+              {/*Your browser does not support the video tag.*/}
+          </video>
+        </div>
+        <div className='w-full max-w-screen-xl mx-auto p-4 pb-20'>
           <div className='w-full max-w-3xl'>
             {/*<h1 className='font-extrabold text-5xl md:text-6xl mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 to-red-500'>Your Partner in Web Development</h1>*/}
             <h1 className='font-extrabold text-5xl md:text-6xl mb-8 text-main-green'>Your Partner in Web Development</h1>
 
-            <p className='text-2xl mb-14 tracking-wide'>Are you ready to elevate your online presence and drive business growth through exceptional web solutions? <br/>
+            <p className='text-lg md:text-2xl mb-14 tracking-wide'>Are you ready to elevate your online presence and drive business growth through exceptional web solutions? <br/>
               Look no further!<br/> ZUMO is your trusted web development partner, dedicated to crafting stunning, high-performing websites tailored to your unique needs.</p>
 
             <ScrollToContactButton/>
