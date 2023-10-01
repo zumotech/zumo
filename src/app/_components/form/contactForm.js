@@ -7,6 +7,8 @@ const ContactForm = () => {
   const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
   const [errors, setErrors] = useState({})
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [formDisabled, setFormDisabled] = useState(false)
 
   const handleValidation = () => {
     let tempErrors = {}
@@ -34,6 +36,8 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setFormDisabled(true)
+    setShowSuccessMessage(false)
 
     let isValid = handleValidation()
 
@@ -49,15 +53,25 @@ const ContactForm = () => {
           })
         })
         .then(res => {
+          setShowSuccessMessage(true)
           setEmail('')
           setSubject('')
           setMessage('')
         })
     }
+
+    setFormDisabled(false)
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8 text-left" autoComplete='off'>
+      {showSuccessMessage &&
+        <div>
+          <h4 className='font-extrabold text-lg mb-2 text-main-green'>Thank you for getting in touch!</h4>
+
+          <p>We appreciate you contacting us. One of our colleagues will get back in touch with you soon! <br/>Have a great day!</p>
+        </div>
+      }
       <div>
         <label htmlFor="email" className="block mb-2 text-sm font-bold">Email <sup>*</sup></label>
         <input
@@ -100,7 +114,8 @@ const ContactForm = () => {
       <button
         type="submit"
         // className="py-4 px-5 text-base text-main font-medium text-center rounded bg-red-500 sm:w-fit hover:bg-red-600 bg-gradient-to-br from-yellow-300 to-red-500 hover:from-red-500 hover:to-yellow-300"
-        className="py-4 px-8 text-base text-main text-center bg-main-green"
+        className="py-4 px-8 text-base text-main text-center bg-main-green disabled:opacity-25"
+        disabled={formDisabled}
       >
         Send message</button>
     </form>
