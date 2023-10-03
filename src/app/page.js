@@ -1,10 +1,17 @@
+"use client"
 import Image from 'next/image'
 import Main from '@/app/_components/shared/main'
 import ContactForm from '@/app/_components/form/contactForm'
-import React from 'react'
+import React, { useEffect } from 'react'
 import ScrollToContactButton from '@/app/_components/form/scrollToContactButton'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <Main>
@@ -31,10 +38,10 @@ export default function Home() {
 
       <section className='w-full'>
         <div className='w-full max-w-screen-xl mx-auto py-4'>
-          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24 px-4'>Why Choose ZUMO?</h2>
+          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24 px-4' data-aos="fade-up" data-aos-duration="1000">Why Choose ZUMO?</h2>
 
           <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M61.73 37.86h-3.12V36.3c0-.46-.38-.84-.84-.84-.46 0-.84.38-.84.84v1.56h-3.1v-2.04c0-1.27-.87-2.33-2.04-2.65V5.47c0-.24-.02-.48-.07-.75-.36-1.85-2-3.2-3.89-3.2H5.47c-1.89 0-3.52 1.35-3.89 3.2v.03c-.04.24-.06.48-.06.72v55.06c0 2.18 1.77 3.95 3.95 3.95h53.39c2.05 0 3.71-1.66 3.71-3.71V50.23a2.765 2.765 0 0 0 1.92-2.63v-6.99a2.77 2.77 0 0 0-2.76-2.75zm-9.57-2.04v2.04h-13.1v-2.04c0-.59.48-1.08 1.08-1.08h10.95c.58 0 1.07.49 1.07 1.08zM47.83 3.19c.13 0 .26.01.38.03.04.01.08.02.13.03l.24.06.15.06c.06.03.12.05.18.08s.11.07.16.1.09.06.14.09c.06.04.11.09.17.14l.09.09c.06.06.11.12.16.19.02.03.04.06.06.08.05.07.1.15.14.22.02.03.03.06.04.09.04.08.07.16.1.24 0 .01.01.03.01.04l-4.47 7.69a4.665 4.665 0 0 1-4.02 2.32h-14v-2.57a3.304 3.304 0 0 0 2.47-3.19c0-1.82-1.48-3.31-3.31-3.31s-3.31 1.49-3.31 3.31c0 1.53 1.05 2.82 2.47 3.19v2.57H11.8c-1.65 0-3.2-.89-4.02-2.33L3.31 4.76c.01-.02.01-.04.02-.06.02-.05.04-.1.06-.14.03-.07.06-.14.1-.2.03-.05.05-.09.08-.13.04-.07.08-.13.13-.18.03-.04.07-.08.1-.12.05-.05.1-.1.16-.15.04-.03.08-.07.12-.1.06-.05.12-.09.18-.13.04-.02.08-.05.12-.08.07-.04.14-.07.21-.1.04-.02.09-.04.13-.06.08-.02.16-.04.25-.06l.12-.03c.12-.02.25-.03.38-.03h42.36zm-21.18 7.46a1.63 1.63 0 1 1 0-3.26 1.63 1.63 0 0 1 0 3.26zM3.19 60.53V7.9l3.13 5.39a6.325 6.325 0 0 0 5.47 3.16h14.02v2.56a3.304 3.304 0 0 0 .84 6.5c1.83 0 3.31-1.49 3.31-3.31 0-1.53-1.05-2.82-2.47-3.19v-2.56h14.02c2.25 0 4.35-1.21 5.47-3.16l3.13-5.39v25.17h-9.98c-1.52 0-2.75 1.24-2.75 2.75v2.04h-3.1V36.3c0-.46-.38-.84-.84-.84-.46 0-.84.38-.84.84v1.56h-3.12c-1.52 0-2.75 1.24-2.75 2.75v7.01c0 1.22.78 2.26 1.92 2.62v10.53c0 .75.23 1.45.61 2.03H5.47a2.27 2.27 0 0 1-2.28-2.27zm23.46-39.96a1.63 1.63 0 1 1 0 3.26 1.63 1.63 0 0 1 0-3.26zm34.24 40.2c0 1.12-.91 2.04-2.04 2.04H32.33a2.04 2.04 0 0 1-2.01-2.03V50.66l.27.06c.94.21 1.87.41 2.77.58l.47.09c.94.17 1.87.33 2.79.46.03 0 .06.01.09.01.9.13 1.79.23 2.68.32.13.01.26.03.39.04.86.08 1.72.14 2.57.18.08 0 .17.01.25.02v1.12a3.01 3.01 0 0 0 3 3.01c1.66 0 3-1.35 3-3.01V52.4c.08 0 .16-.01.24-.02.83-.05 1.67-.11 2.52-.19.14-.01.28-.03.42-.05.86-.09 1.72-.19 2.61-.32.05-.01.09-.01.14-.02.9-.13 1.82-.28 2.76-.45l.52-.09c.9-.17 1.83-.36 2.78-.56l.29-.06v10.13zM46.93 51.6v1.94c0 .74-.59 1.34-1.33 1.34s-1.33-.6-1.33-1.34v-3.79c0-.73.6-1.33 1.33-1.33.36 0 .69.14.94.39s.39.58.39.94v1.85zm15.88-3.99c0 .51-.34.94-.83 1.06l-.43.1c-.62.14-1.23.28-1.83.4-.21.04-.4.08-.61.12-.39.08-.78.16-1.17.23-.23.04-.46.08-.69.13-.35.06-.69.13-1.04.19-.24.04-.47.08-.71.11l-.97.15c-.24.04-.48.07-.71.1l-.93.12c-.24.03-.48.06-.72.08-.29.03-.59.07-.88.09-.25.02-.49.05-.74.07-.28.02-.56.05-.84.07-.25.02-.51.04-.76.05-.12.01-.24.01-.36.02v-.96c0-.8-.31-1.56-.88-2.12-.57-.57-1.32-.88-2.12-.88-1.66 0-3 1.35-3 3v.99c-.13-.01-.26-.01-.39-.02-.26-.01-.51-.03-.77-.05l-.84-.06c-.25-.02-.51-.04-.77-.07l-.85-.09-.77-.09c-.29-.03-.57-.07-.86-.11-.26-.04-.52-.07-.79-.11-.29-.04-.58-.09-.87-.14-.27-.04-.53-.08-.8-.13-.31-.05-.62-.11-.93-.17-.25-.05-.51-.09-.76-.14-.39-.08-.79-.16-1.19-.25-.18-.04-.35-.07-.54-.11-.59-.13-1.19-.27-1.8-.42-.01 0-.02-.01-.04-.01-.11-.02-.22-.05-.42-.1-.48-.12-.81-.55-.81-1.05V40.6c0-.59.48-1.08 1.08-1.08h32.26c.6 0 1.08.47 1.08 1.08v7.01z"/>
@@ -47,7 +54,7 @@ export default function Home() {
               <p className='text-lg mb-4'>Our team of seasoned developers brings years of experience and cutting-edge skills to the table. From front-end design to back-end functionality, we've got you covered.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M10.02 57.17h17.64a.83.83 0 0 0 .59-1.42L10.61 38.1a.832.832 0 0 0-1.42.59v17.64c0 .47.37.84.83.84zm.84-16.47 14.8 14.8h-14.8V40.7z"/>
@@ -62,7 +69,7 @@ export default function Home() {
               <p className='text-lg mb-4'>One-size-fits-all doesn't cut it in the digital world. We specialize in creating bespoke websites that reflect your brand identity and goals.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M63.63 8.16c0-2.35-1.91-4.27-4.27-4.27H6.64c-2.35 0-4.27 1.91-4.27 4.27v37.39a4.282 4.282 0 0 0 4.27 4.27H25.6l-3.89 5.73h-2.54c-2.08 0-3.77 1.69-3.77 3.77v1.07h-3.9a.85.85 0 1 0 0 1.7h49.98c1.19 0 2.15-.97 2.15-2.15V8.16zM41.39 28.9c0-.25.2-.45.45-.45h19.64c.25 0 .45.2.45.45v25.12H41.39V28.9zM6.64 5.6h52.72c1.41 0 2.56 1.15 2.56 2.56V26.8c-.15-.03-.29-.05-.45-.05H41.84c-1.19 0-2.15.97-2.15 2.15v9H4.08V8.16c0-1.41 1.15-2.56 2.56-2.56zm-1 42.32c-.92-.39-1.57-1.3-1.57-2.36V39.6h35.61v8.52H6.64c-.35 0-.69-.07-1-.2zm22.02 1.91h12.03v5.73H23.76l3.9-5.73zm-10.56 9.5c0-1.14.93-2.07 2.07-2.07h20.52v2.69c0 .15.02.3.05.45H17.1v-1.07zm44.82.62c0 .25-.2.45-.45.45H41.84c-.25 0-.45-.2-.45-.45v-4.23h20.53v4.23z"/>
@@ -74,7 +81,7 @@ export default function Home() {
               <p className='text-lg mb-4'>In today's mobile-first era, your website needs to shine on all devices. We ensure that your site is not just beautiful but fully responsive too.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="600">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M63.2 56.42h-8.62V44.44c.19.05.39.09.59.09.57 0 1.1-.22 1.5-.62l3.74-3.74c.4-.4.62-.93.62-1.5s-.22-1.1-.62-1.5l-5.83-5.83V8.75c0-1.48-.58-2.88-1.63-3.94a5.571 5.571 0 0 0-3.94-1.63H7.53c-3.07 0-5.57 2.5-5.57 5.57v5.34c0 .46.38.84.84.84h8.63v42.33c0 1.49.58 2.89 1.63 3.94A5.537 5.537 0 0 0 17 62.83h41.48c3.07 0 5.57-2.5 5.57-5.57a.847.847 0 0 0-.85-.84zm-3.98-18.07c.17.17.17.46 0 .63l-3.74 3.74c-.17.17-.46.17-.63 0l-6.78-6.78a.773.773 0 0 1 0-1.08l3.29-3.29c.15-.15.35-.22.54-.22s.39.07.54.22l6.78 6.78zM48.1 30.06l1.2 1.2-1.53 1.53-1.2-1.2c.55-.47 1.06-.98 1.53-1.53zm-10.26 3.08c-6.51 0-11.81-5.3-11.81-11.81 0-6.51 5.3-11.81 11.81-11.81s11.81 5.3 11.81 11.81c-.01 6.51-5.3 11.81-11.81 11.81zM11.42 13.25H3.64v-4.5c0-2.15 1.75-3.89 3.89-3.89 1.03 0 2.01.41 2.75 1.14a3.88 3.88 0 0 1 1.14 2.76v4.49zm5.57 47.9c-1.04 0-2.02-.4-2.75-1.14a3.874 3.874 0 0 1-1.14-2.75V8.75c0-1.47-.56-2.84-1.58-3.89h37.49c1.03 0 2.01.41 2.75 1.13.74.74 1.14 1.72 1.14 2.76v21.14c-.77-.34-1.68-.27-2.39.22l-1.4-1.4a13.41 13.41 0 0 0 2.21-7.38c0-7.44-6.05-13.49-13.49-13.49s-13.49 6.05-13.49 13.49 6.05 13.49 13.49 13.49c2.72 0 5.25-.82 7.38-2.21l1.4 1.4c-.28.41-.44.89-.44 1.39 0 .65.25 1.27.72 1.73l6.04 6.04c-.01.05-.03.09-.03.14v13.1H21.72c-.46 0-.84.38-.84.84a3.89 3.89 0 0 1-3.89 3.9zm41.48 0h-37.5c.8-.82 1.35-1.87 1.53-3.05h39.77a3.894 3.894 0 0 1-3.8 3.05z"/>
@@ -87,7 +94,7 @@ export default function Home() {
               <p className='text-lg mb-4'>What good is a website if it can't be found? We implement SEO best practices to boost your site's visibility and search engine ranking.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M14.34 9.89c1.52 0 2.76-1.24 2.76-2.76s-1.24-2.76-2.76-2.76-2.76 1.24-2.76 2.76 1.24 2.76 2.76 2.76zm0-3.82a1.06 1.06 0 1 1-.001 2.121 1.06 1.06 0 0 1 .001-2.121zM21.46 9.89c1.52 0 2.76-1.24 2.76-2.76s-1.24-2.76-2.76-2.76c-1.52 0-2.76 1.24-2.76 2.76s1.24 2.76 2.76 2.76zm0-3.82a1.06 1.06 0 1 1-.001 2.121 1.06 1.06 0 0 1 .001-2.121zM28.58 9.89c1.52 0 2.76-1.24 2.76-2.76s-1.24-2.76-2.76-2.76-2.76 1.24-2.76 2.76 1.24 2.76 2.76 2.76zm0-3.82a1.06 1.06 0 1 1-.001 2.121 1.06 1.06 0 0 1 .001-2.121zM22.07 24.56h20.79c.84 0 1.53-.69 1.53-1.53V17.9c0-.84-.69-1.53-1.53-1.53H22.07c-.84 0-1.53.69-1.53 1.53v5.14c0 .84.68 1.52 1.53 1.52zm.17-6.49h20.44v4.79H22.24v-4.79zM20.25 49.95h-7.03c-.75 0-1.37.61-1.37 1.37v4.96c0 .75.61 1.36 1.37 1.36h7.03c.75 0 1.36-.61 1.36-1.36v-4.96c0-.76-.61-1.37-1.36-1.37zm-.34 5.99h-6.35v-4.29h6.35v4.29zM20.76 59.35h-7.67a.85.85 0 1 0 0 1.7h7.67a.85.85 0 1 0 0-1.7zM33.57 49.95h-7.03c-.75 0-1.36.61-1.36 1.37v4.96c0 .75.61 1.36 1.36 1.36h7.03c.75 0 1.37-.61 1.37-1.36v-4.96c-.01-.76-.62-1.37-1.37-1.37zm-.34 5.99h-6.35v-4.29h6.35v4.29zM34.08 59.35h-7.67a.85.85 0 1 0 0 1.7h7.67a.85.85 0 1 0 0-1.7zM46.89 49.95h-7.03c-.75 0-1.37.61-1.37 1.37v4.96c0 .75.61 1.36 1.37 1.36h7.03c.75 0 1.36-.61 1.36-1.36v-4.96c0-.76-.61-1.37-1.36-1.37zm-.34 5.99H40.2v-4.29h6.35v4.29zM47.4 59.35h-7.67a.85.85 0 1 0 0 1.7h7.67a.85.85 0 1 0 0-1.7z"/>
@@ -100,7 +107,7 @@ export default function Home() {
               <p className='text-lg mb-4'>If you're looking to sell online, our e-commerce solutions will empower your business to thrive in the digital marketplace.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="800">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M63.19 54.26h-2.87V21.69c0-2.08-1.69-3.77-3.77-3.77h-5.76V5.76c0-2.02-1.64-3.66-3.66-3.66H18.87c-2.02 0-3.66 1.64-3.66 3.66v12.16H9.45c-2.08 0-3.77 1.69-3.77 3.77v32.57H2.81c-.46 0-.83.37-.83.83v4.21a4.6 4.6 0 0 0 4.6 4.6h52.84a4.6 4.6 0 0 0 4.6-4.6v-4.21c0-.46-.37-.83-.83-.83zm-6.64-34.69c1.17 0 2.12.95 2.12 2.12v32.57H40.91c-.38 0-.7.25-.8.62l-.38 1.45c-.24.91-1.06 1.55-2 1.55h-9.45c-.94 0-1.76-.64-2-1.55l-.38-1.45a.825.825 0 0 0-.8-.62H11.26V24.63c0-.63.51-1.14 1.14-1.14h2.82v20.37c0 2.02 1.64 3.66 3.66 3.66h28.27c2.02 0 3.66-1.64 3.66-3.66V23.49h2.82c.63 0 1.14.51 1.14 1.14v25.56c0 .46.37.83.83.83s.83-.37.83-.83V24.63c0-1.54-1.25-2.79-2.79-2.79h-2.82v-2.27h5.73zm-7.41 24.3c0 1.11-.9 2.01-2.01 2.01H18.87c-1.11 0-2.01-.9-2.01-2.01V9.97h32.28v33.9zM18.87 3.76h28.27c1.11 0 2.01.9 2.01 2.01v2.56H16.86V5.76c0-1.1.9-2 2.01-2zM7.33 21.69c0-1.17.95-2.12 2.12-2.12h5.76v2.27h-2.82c-1.54 0-2.79 1.25-2.79 2.79v29.63H7.33V21.69zM62.37 59.3c0 1.63-1.32 2.95-2.95 2.95H6.58c-1.63 0-2.95-1.32-2.95-2.95v-3.38h20.82l.22.83a3.722 3.722 0 0 0 3.6 2.78h9.45c1.69 0 3.17-1.14 3.6-2.78l.22-.83H62.36v3.38z"/>
@@ -111,7 +118,7 @@ export default function Home() {
               <p className='text-lg mb-4'>Your users matter. We focus on creating user-friendly, intuitive interfaces that keep visitors engaged and coming back for more.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="900">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M40.7 31.89c.16 0 .31-.04.46-.13.4-.25.52-.78.26-1.17-.72-1.13-1.55-2.21-2.47-3.2a.843.843 0 0 0-1.2-.05c-.35.32-.37.86-.05 1.2.85.92 1.62 1.91 2.28 2.96.16.25.44.39.72.39zM22.83 39.36c-1.67 0-3.02 1.36-3.02 3.02 0 1.67 1.36 3.03 3.02 3.03 1.67 0 3.03-1.36 3.03-3.03 0-1.66-1.36-3.02-3.03-3.02zm0 4.35c-.73 0-1.32-.6-1.32-1.33 0-.73.59-1.32 1.32-1.32.73 0 1.33.59 1.33 1.32 0 .74-.6 1.33-1.33 1.33z"/>
@@ -125,7 +132,7 @@ export default function Home() {
               <p className='text-lg mb-4'>From the latest frameworks to innovative development techniques, we stay ahead of the curve to provide you with top-notch solutions.</p>
             </div>
 
-            <div className='p-4'>
+            <div className='p-4' data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000">
               <div className="flex">
                 <svg className='h-36 fill-main-green' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 82.5">
                   <path d="M35.74 31.75c.47 0 .84-.38.84-.84v-1.12c0-.47-.38-.84-.84-.84s-.84.38-.84.84v1.12c0 .46.37.84.84.84zM37.25 36.45c.22 0 .43-.08.6-.25.33-.33.33-.86 0-1.19a2.997 2.997 0 0 0-4.23 0c-.33.33-.33.86 0 1.19.33.33.86.33 1.19 0 .52-.52 1.33-.52 1.85 0 .16.16.38.25.59.25zM41.95 27.69c-.47 0-.84.38-.84.84 0 .23-.18.41-.41.41-.23 0-.41-.18-.41-.41 0-.47-.38-.84-.84-.84s-.84.38-.84.84c0 1.15.94 2.09 2.1 2.09 1.16 0 2.09-.94 2.09-2.09 0-.46-.38-.84-.85-.84zM38.74 26.14c.22 0 .43-.08.6-.25.75-.75 1.98-.75 2.73 0 .33.33.86.33 1.19 0 .33-.33.33-.86 0-1.19a3.615 3.615 0 0 0-5.11 0c-.33.33-.33.86 0 1.19.16.17.37.25.59.25zM33.33 24.7a3.615 3.615 0 0 0-5.11 0c-.33.33-.33.86 0 1.19.33.33.86.33 1.19 0 .75-.75 1.97-.75 2.73 0 .16.16.38.25.6.25.22 0 .43-.08.6-.25.32-.32.32-.86-.01-1.19zM32.03 27.69c-.47 0-.84.38-.84.84 0 .23-.18.41-.41.41-.23 0-.42-.18-.42-.41 0-.47-.38-.84-.84-.84s-.84.38-.84.84a2.095 2.095 0 0 0 4.19 0c0-.46-.37-.84-.84-.84z"/>
@@ -142,9 +149,9 @@ export default function Home() {
 
       <section className='w-full'>
         <div className='w-full max-w-screen-xl mx-auto py-4'>
-          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24 px-4'>Our Services</h2>
+          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24 px-4' data-aos="fade-up" data-aos-duration="1000">Our Services</h2>
 
-          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
             <div className='md:w-1/2 md:pr-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>Web Design</h3>
               <p className='text-lg mb-4'>Our design wizards transform your vision into pixel-perfect reality, ensuring a visually stunning and engaging website.</p>
@@ -159,7 +166,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36'  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
             <div className='md:w-1/2 md:pl-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>Web Development</h3>
               <p className='text-lg mb-4'>Our developers code with precision, creating powerful, scalable, and secure web applications.</p>
@@ -170,7 +177,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
             <div className='md:w-1/2 md:pr-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>E-commerce Solutions</h3>
               <p className='text-lg mb-4'>We build robust online stores that maximize conversions and streamline the shopping experience.</p>
@@ -181,7 +188,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
             <div className='md:w-1/2 md:pl-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>CMS Development</h3>
               <p className='text-lg mb-4'>Take control of your content with our custom Content Management System (CMS) solutions.</p>
@@ -192,7 +199,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex items-center px-4 pt-20 md:pt-36' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
             <div className='md:w-1/2 md:pr-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>Website Maintenance</h3>
               {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -204,7 +211,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36'>
+          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">
             <div className='md:w-1/2 md:pl-24 pb-8'>
               <h3 className='font-extrabold text-3xl mb-4'>Business and functional analysis</h3>
               <p className='text-lg mb-4'>Unlock the potential of your business through meticulous business and functional analysis. We turn complexity into clarity, helping you pave the path to success.</p>
@@ -224,15 +231,15 @@ export default function Home() {
       <section id='contact-form' className='w-full flex flex-col items-center justify-center min-h-screen'>
         <div className='w-full max-w-screen-xl mx-auto md:text-center p-4'>
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24'>Let's Get Started</h2>
+          <h2 className='font-extrabold text-4xl text-center mb-24 mt-24' data-aos="fade-up" data-aos-duration="1000">Let's Get Started</h2>
 
-          <p className='text-lg mb-8'>Ready to transform your digital presence? Contact us today for a free consultation.<br/>
+          <p className='text-lg mb-8' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Ready to transform your digital presence? Contact us today for a free consultation.<br/>
             Whether you have a clear vision or need guidance, ZUMO is here to turn your web development dreams into reality.</p>
 
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <p className="text-lg mb-14">Join the ranks of our satisfied clients who have experienced the ZUMO difference.<br/> Let's build something incredible together!</p>
+          <p className="text-lg mb-14" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Join the ranks of our satisfied clients who have experienced the ZUMO difference.<br/> Let's build something incredible together!</p>
 
-          <div className='w-full max-w-screen-lg mx-auto mb-14'>
+          <div className='w-full max-w-screen-lg mx-auto mb-14' data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="1000">
             <ContactForm />
           </div>
         </div>
