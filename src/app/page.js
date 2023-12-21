@@ -228,8 +228,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='contact-form' className='w-full flex flex-col items-center justify-center min-h-screen'>
-        <div className='w-full max-w-screen-xl mx-auto md:text-center p-4'>
+      <section id="contact-form" className="w-full flex flex-col items-center justify-center min-h-screen">
+        <div className="w-full max-w-screen-xl mx-auto md:text-center p-4">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h2 className='font-extrabold text-4xl text-center mb-24 mt-24' data-aos="fade-up" data-aos-duration="1000">Let's Get Started</h2>
 
