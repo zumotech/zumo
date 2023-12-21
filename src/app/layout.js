@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'ZUMO - Your Partner in Web Development',
   description: 'Are you ready to elevate your online presence and drive business growth through exceptional web solutions? Look no further! ZUMO is your trusted web development partner, dedicated to crafting stunning, high-performing websites tailored to your unique needs.',
+  metadataBase: new URL('https://zumo.mk'),
 }
 
 export default function RootLayout({ children }) {
