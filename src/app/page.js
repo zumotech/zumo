@@ -157,17 +157,18 @@ export default function Home() {
               <p className='text-lg mb-4'>Our design wizards transform your vision into pixel-perfect reality, ensuring a visually stunning and engaging website.</p>
             </div>
 
-            <div className="flex md:w-1/2 relative h-96">
-              <video className="w-full h-full" playsInline autoPlay muted loop>
-                {/*<source src="/video-bg.webm" type="video/webm"/>*/}
-                <source src="/web-design.mp4" type="video/mp4"/>
-                {/*Your browser does not support the video tag.*/}
-              </video>
-              {/*<Image*/}
-              {/*  src='/web-design.jpeg'*/}
-              {/*  alt='Web Design'*/}
-              {/*  fill*/}
-              {/*/>*/}
+            <div className="flex md:w-1/2 relative justify-center">
+              {/*<video className="w-full h-full" playsInline autoPlay muted loop>*/}
+              {/*  /!*<source src="/video-bg.webm" type="video/webm"/>*!/*/}
+              {/*  <source src="/web-design.mp4" type="video/mp4"/>*/}
+              {/*  /!*Your browser does not support the video tag.*!/*/}
+              {/*</video>*/}
+              <Image
+                src='/web-design.png'
+                alt='Web Design'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
 
@@ -178,8 +179,13 @@ export default function Home() {
               <p className='text-lg mb-4'>Our developers code with precision, creating powerful, scalable, and secure web applications.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
-
+            <div className='flex md:w-1/2 relative justify-center'>
+              <Image
+                src='/web-development.png'
+                alt='Web Development'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
 
@@ -189,8 +195,13 @@ export default function Home() {
               <p className='text-lg mb-4'>We build robust online stores that maximize conversions and streamline the shopping experience.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
-              {/*<Image src='/ecommerce-solutions.svg' alt='E-commerce Solutions' fill />*/}
+            <div className='flex md:w-1/2 relative justify-center'>
+              <Image
+                src='/e-commerce.png'
+                alt='E-commerce Solutions'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
 
@@ -200,8 +211,13 @@ export default function Home() {
               <p className='text-lg mb-4'>Take control of your content with our custom Content Management System (CMS) solutions.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
-
+            <div className='flex md:w-1/2 relative justify-center'>
+              <Image
+                src='/cms-development.png'
+                alt='CMS Development'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
 
@@ -212,8 +228,13 @@ export default function Home() {
               <p className='text-lg mb-4'>We're with you for the long haul, offering ongoing support, updates, and enhancements to keep your site in top shape.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
-              
+            <div className='flex md:w-1/2 relative justify-center'>
+              <Image
+                src='/website-maintenance.png'
+                alt='Website Maintenance'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
 
@@ -223,12 +244,13 @@ export default function Home() {
               <p className='text-lg mb-4'>Unlock the potential of your business through meticulous business and functional analysis. We turn complexity into clarity, helping you pave the path to success.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
-              {/*<Image*/}
-              {/*  src='/business-functional-analysis.svg'*/}
-              {/*  alt='Business and functional analysis'*/}
-              {/*  fill*/}
-              {/*/>*/}
+            <div className='flex md:w-1/2 relative justify-center'>
+              <Image
+                src='/business-functional-analysis2.png'
+                alt='Business and functional analysis'
+                width={368}
+                height={368}
+              />
             </div>
           </div>
         </div>
