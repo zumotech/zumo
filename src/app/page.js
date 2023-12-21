@@ -157,7 +157,12 @@ export default function Home() {
               <p className='text-lg mb-4'>Our design wizards transform your vision into pixel-perfect reality, ensuring a visually stunning and engaging website.</p>
             </div>
 
-            <div className='flex md:w-1/2 relative h-96'>
+            <div className="flex md:w-1/2 relative h-96">
+              <video className="w-full h-full" playsInline autoPlay muted loop>
+                {/*<source src="/video-bg.webm" type="video/webm"/>*/}
+                <source src="/web-design.mp4" type="video/mp4"/>
+                {/*Your browser does not support the video tag.*/}
+              </video>
               {/*<Image*/}
               {/*  src='/web-design.jpeg'*/}
               {/*  alt='Web Design'*/}
@@ -166,9 +171,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36'  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-            <div className='md:w-1/2 md:pl-24 pb-8'>
-              <h3 className='font-extrabold text-3xl mb-4'>Web Development</h3>
+          <div className="mx-auto md:flex flex-row-reverse items-center px-4 pt-20 md:pt-36" data-aos="fade-left"
+               data-aos-duration="1000" data-aos-delay="400">
+            <div className="md:w-1/2 md:pl-24 pb-8">
+              <h3 className="font-extrabold text-3xl mb-4">Web Development</h3>
               <p className='text-lg mb-4'>Our developers code with precision, creating powerful, scalable, and secure web applications.</p>
             </div>
 
