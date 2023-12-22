@@ -274,7 +274,7 @@ export default function Home() {
           <p className="text-lg mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Join the ranks of our satisfied clients who have experienced the ZUMO difference.<br/> Let's build something incredible together!</p>
           
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <p className='text-lg mb-14' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact us by phone at <a href="tel:38970644013">+389 70 644 013</a> or write us a message in the form bellow.</p>
+          <p className='text-lg mb-14' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact us by phone at <a className='text-main-green hover:underline' href="tel:38970644013">+389 70 644 013</a> or write us a message in the form bellow.</p>
             
           <div className='w-full max-w-screen-lg mx-auto mb-14' data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="1000">
             <ContactForm />
