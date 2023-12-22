@@ -24,6 +24,10 @@ export async function POST(req) {
       body: JSON.stringify({
         to: [{
           email: 'pbeluent@gmail.com'
+        },
+        {
+          email: 'info@zumo.mk',
+          name: "Zumo Info"
         }],
         replyTo: {
           email: email
