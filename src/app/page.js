@@ -168,6 +168,7 @@ export default function Home() {
                 alt='Web Design'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
@@ -185,6 +186,7 @@ export default function Home() {
                 alt='Web Development'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
@@ -201,6 +203,7 @@ export default function Home() {
                 alt='E-commerce Solutions'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
@@ -217,6 +220,7 @@ export default function Home() {
                 alt='CMS Development'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
@@ -234,6 +238,7 @@ export default function Home() {
                 alt='Website Maintenance'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
@@ -250,6 +255,7 @@ export default function Home() {
                 alt='Business and functional analysis'
                 width={368}
                 height={368}
+                className='max-w-[340px]'
               />
             </div>
           </div>
