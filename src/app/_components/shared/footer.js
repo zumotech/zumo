@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faFontAwesome, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Image from 'next/image'
 
 const Footer = () => {
@@ -19,10 +16,6 @@ const Footer = () => {
 
         <p className='text-center text-sm leading-6'>© { new Date().getFullYear() } ZUMO. All rights reserved.</p>
       </div>
-      {/*<p><FontAwesomeIcon icon={faCoffee} /></p>*/}
-      {/*<p><FontAwesomeIcon icon={faTwitter} /></p>*/}
-      {/*<p><FontAwesomeIcon icon={faFontAwesome} /></p>*/}
-      {/*<p><FontAwesomeIcon icon={faInstagram} /></p>*/}
     </footer>
   )
 }
